@@ -1,0 +1,43 @@
+    /* #counselling*/
+    #counselling{
+        .counselling-item{
+            display: flex;
+            form{
+                width: 100%;
+                .input-group{
+                    .form-content{
+                        padding: 1rem;
+                        margin: 1rem;
+                        border-radius: 1rem;
+                        background-color: rgba(252, 252, 252, 0.3);
+                    }
+                    .form-content::placeholder {
+                        color: rgb(0, 0, 0);
+                      }
+                    textarea{
+                        padding: 1rem 1rem 3rem 1rem;
+                    }
+
+                    .form-content:focus {
+                        outline: 3px solid rgb(146, 146, 146);
+                      }
+
+                }
+
+                .text-btn-group{
+                    margin: 1rem 0;
+                    justify-content: center;
+                    .btn-form{
+                        border-radius: 0;
+                        width: 200px;
+                        background: #fff;
+                        a{
+                            text-decoration: none;
+                            color: #2C5987;
+                        }
+                    }
+                }
+            }
+        }
+
+    }

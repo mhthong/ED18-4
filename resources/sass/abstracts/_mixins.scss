@@ -1,0 +1,267 @@
+@mixin flexb-c {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin flexb-s-a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
+
+@mixin flexb-s-b {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+@mixin flexb-col-c {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin flexb-col-s-a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
+
+@mixin flexb-col-s-b {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+@mixin ul {
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        position: relative;
+
+        li {
+            width: 100%;
+
+            a {
+                color: black;
+                text-decoration: none;
+
+                &:hover {}
+            }
+
+            &:hover {}
+        }
+
+    }
+}
+
+@mixin img {
+
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+@mixin btn {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+@mixin a {
+    text-decoration: none;
+    color: black;
+}
+
+
+@mixin input-number {
+    font-size: 0.9rem;
+    $border-radius: 6px;
+    $btn-bg-color: rgba(38, 37, 37, 0.3);
+    $btn-width: 20px;
+    $btn-height: 50px;
+
+    .form-qty{
+
+
+
+        label{
+            width: 100%;
+            margin-top: 1rem;
+
+        }
+
+        .input-number{
+            position: relative;
+            margin: 1rem 0;
+
+            .decrease {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                max-width: 20px;
+                color: black;
+                font-size: 30px;
+                border: 1px solid #ddd;
+                background: none;
+                padding: 1rem;
+
+                &:hover {
+                    background-color: lighten($btn-bg-color, 10%);
+                }
+                &:before{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    display: inline-block;
+                    content: "";
+                    width: 14px;
+                    height: 1px;
+                    background-color: black;
+                    transform: translate(-50%,-50%) rotate(0deg);
+                }
+            }
+
+            .increase {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                max-width: 20px;
+                color: black;
+                font-size: 30px;
+                border: 1px solid #ddd;
+                background: none;
+                padding: 1rem;
+
+                &:hover {
+                    background-color: lighten($btn-bg-color, 10%);
+                }
+                &:before{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    display: inline-block;
+                    content: "";
+                    width: 14px;
+                    height: 1px;
+                    background-color: black;
+                    transform: translate(-50%,-50%) rotate(0deg);
+                }
+
+                &:after{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    display: inline-block;
+                    content: "";
+                    width: 14px;
+                    height: 1px;
+                    background-color: black;
+                    transform: translate(-50%,-50%) rotate(90deg);
+
+                }
+
+
+
+            }
+
+
+
+                .number {
+
+                    text-align: center;
+                    width: 100px;
+                    transition: 0.5s all ease-in-out;
+                    border: none;
+                    font-size: 1.7rem;
+                }
+
+                input:focus-visible {
+                    outline:none;
+
+                }
+
+                input[type="number"] {
+                    -webkit-appearance: textfield;
+                       -moz-appearance: textfield;
+                            appearance: textfield;
+                  }
+                  input[type=number]::-webkit-inner-spin-button,
+                  input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                  }
+        }
+        }
+
+}
+
+/* tao dau X */
+
+@mixin close {
+
+        position: relative;
+        width: 20px;
+        height: 20px;
+        max-width: 20px;
+        color: black;
+        font-size: 30px;
+        background: none;
+        &:before{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            content: "";
+            width: 15px;
+            height: 1px;
+            background-color: black;
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+
+        &:after{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            content: "";
+            width: 15px;
+            height: 1px;
+            background-color: black;
+            transform: translate(-50%, -50%) rotate(135deg);
+
+        }
+
+
+
+
+}

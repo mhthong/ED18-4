@@ -1,0 +1,185 @@
+@import '../abstracts/mixins';
+
+
+
+    .product-header {
+        width: 100%;
+
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .product-header-title {
+            width: 100%;
+            transition: all 1s;
+
+            h1 {
+                width: 100%;
+                padding: 100px 0;
+                text-align: center;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+
+                a:hover {
+                    color: rgb(243, 198, 102);
+
+                }
+            }
+
+
+        }
+
+    }
+
+    .product-content {
+        padding: 2rem 0;
+
+        .product-main {
+
+            @include flexb-c();
+            align-items: flex-start;
+            position: relative;
+
+
+            .product {
+
+                .product-item {
+                    @include flexb-c();
+                    padding: 1rem 1rem;
+
+
+                    .product-img {
+                        width: 100%;
+                        height: 200px;
+                        position: relative;
+                        overflow: hidden;
+
+
+                        img {
+                            @include img();
+        
+
+                        }
+
+                        .info {
+                            background: rgba(27, 26, 26, 0.9);
+                            font-family: 'Farsan', cursive;
+                            transition: all 0.6s ease-out;
+                            transform: translateY(-100%);
+                            position: absolute;
+                            line-height: 1.9;
+                            text-align: left;
+                            font-size: 120%;
+                            cursor: no-drop;
+                            color: #FFF;
+                            height: 100%;
+                            width: 100%;
+                            left: 0;
+                            top: 0;
+
+
+                            i {
+                                display: block;
+                                margin: 1rem;
+                            }
+
+                            i:hover {
+                                color: red;
+                            }
+
+                            .info-btn {
+                                width: 100%;
+                                @include flexb-col-c();
+                                gap: 10%;
+                                position: relative;
+                                top: -20px;
+
+                                .btn-info {
+                                    height: 50px;
+                                    width: 50px;
+                                    padding: 0;
+                                    background: #adb5bd;
+                                    margin: 1rem;
+                                    border-radius: 2rem;
+
+                                }
+
+                                
+                                .btncart {
+                                    height: 50px;
+                                    width: 50px;
+                                    padding: 0;
+                                    background: #adb5bd;
+                                    margin: 1rem;
+                                    border-radius: 2rem;
+                                }
+
+                                .btncart:hover {
+                                    background: rgb(245, 205, 205);
+                                }
+
+                                .btn-info:hover {
+                                    background: rgb(245, 205, 205);
+                                }
+
+
+                            }
+
+
+
+                        }
+                    }
+
+                    .product-img:hover {
+                        .info {
+                            transform: translateY(0);
+                        }
+                    }
+
+
+                    a {
+                        width: 100%;
+                        
+                        margin: 1rem 0;
+                        @include a();
+                        font-size: 0.7rem;
+                        transition: all 1s;
+
+
+
+                        .product-title {
+
+                            p {
+                                font-size: 1rem;
+                                margin: 1rem 0;
+                                font-weight: 600;
+                                transition: all 0.5s;
+                                text-align: center;
+                            }
+
+                            p:hover {
+                                color: antiquewhite;
+                            }
+
+
+                        }
+
+
+                        .product-text {
+                            p {
+                                text-align: center;
+                                font-size: 1.1rem;
+                                color: red;
+                                margin: 0;
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }

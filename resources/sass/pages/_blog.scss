@@ -1,0 +1,108 @@
+@import '../abstracts/mixins';
+
+
+
+    .blog-main{
+ 
+        @include flexb-c();
+        align-items: flex-start;
+
+        .blog-content{
+            line-height: 1.5rem;
+            transition: all 0.7s;
+            margin: 2rem 0;
+
+            h3{
+                text-align: center;
+
+            }
+
+            h5{
+                width: 100%;
+                text-align: center;
+               
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+
+                a:hover{
+                    color: bisque;
+                }
+            }
+
+            img{
+                @include img();
+            }
+
+
+        }
+
+        .blog-nav{
+            @include flexb-c();
+            justify-content: flex-start;
+            transition: all 1s;
+
+            h2{
+                font-weight: 600;
+                border-bottom: solid 1px black;
+            }
+
+            .nav-blog-item{
+                display: flex;
+
+  
+                a{
+                    margin: 1rem;
+                    padding: 1rem;
+                    @include a();
+                    font-size: 0.7rem;
+                    transition: all 1s;
+
+                    img{
+                        @include img();
+                    }
+    
+                    .blog-title{
+
+                        p{
+                            font-size: 1rem;
+                            font-weight: 600;
+                            transition: all 0.5s;
+                        }
+
+                        p:hover{
+                            color: antiquewhite;
+                        }
+
+    
+                    }
+
+    
+                    .blog-text{
+                        p{
+                            margin: 0;
+                        }
+    
+                    }
+
+
+                }
+
+                a:hover{
+                    
+                    padding: 0rem 1rem 2rem 1rem;
+                    border-bottom: solid 1px rgb(182, 175, 175);
+
+                }
+
+
+
+
+            }
+
+
+        }
+
+    }

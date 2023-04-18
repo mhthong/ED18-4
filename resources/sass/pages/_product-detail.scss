@@ -1,0 +1,423 @@
+
+@import '../abstracts/mixins';
+
+/* checkbox */
+$checkbox-color:	#CDD1C4;
+$default-checked: 	#2980b9;
+$good-checked: 		#27ae60;
+$bad-checked: 		#c0392b;
+$default-hover: 	lighten($default-checked, 25%);
+$good-hover: 		lighten($good-checked, 25%);
+$bad-hover: 		lighten($bad-checked, 25%);
+$mark:				$checkbox-color;
+@mixin flex-box($direction: row, $wrap: wrap, $justify: center, $align: center) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin glow($color) {
+    box-shadow: 0 0 2em 0.01em $color;
+}
+
+
+/* endcheckbox */
+
+
+
+
+    .product-detail-header{
+        width: 100%;
+
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        .product-header-title{
+            width: 100%;
+            transition: all 1s;
+            
+            h1{
+                width: 100%;
+                padding: 100px 0;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+
+                a:hover{
+                    color: rgb(243, 198, 102);
+                    
+                }
+            }
+
+
+        }
+
+    }
+
+    .product-detail-content{
+        width: 100%;
+        .product-detail-main{
+            margin: 1rem 0;
+            border: solid 1px rgb(97, 94, 94);
+            border-radius: 1rem;
+
+            @include flexb-c();
+            align-items: flex-start;
+    
+            .product-detail-left{
+                @include flexb-col-c();
+    
+                .img-sanpham{
+                    .item-img{
+                        padding: 1rem;
+    
+                        img{
+                            @include img();
+                            
+                        }
+                    }
+                }
+    
+                .img-sanpham-nav{
+                    @include flexb-c();
+                    .item-img{    
+                        padding: 1rem; 
+    
+                        img{
+                            @include img();
+                            opacity: 0.5;
+                            transition: all 0.4s;
+                        }
+    
+                        img:hover{
+                            opacity: 0.7;
+                        }
+                    }
+                }
+    /*             .slick-arrow{
+                    display: none;
+                    position: absolute;
+                    color: white;
+                    border: none;
+                    z-index: 2;
+                    opacity: 0.5;
+                    padding: 10px;
+                    border-radius: 50px;
+                    i{
+                        font-size: 25px;
+    
+         
+                        color: black;
+                    }
+                }
+                .slick-arrow:hover{
+                    background-color: bisque;
+                }
+                .slick-prev{
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 10px;
+                }
+                .slick-next{
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
+                } */
+            }
+            .product-detail-right{
+                padding: 1rem;
+               
+                .text-header{
+                    font-size: 0.9rem;
+                    color: rgb(112, 3, 190);
+                    
+                }
+                .text-header-01{
+                    font-size: 1.2rem;
+    
+                }
+                .code{
+                    margin: 1rem 0px 1rem;
+                }
+                .start{
+                    i{
+                        color: rgb(112, 3, 190);
+                        line-height: 30px;
+                    }
+                    b{
+                        margin: 0px 10px;
+                    }
+                }
+    
+                /* checkbox */
+    
+                form{
+                    padding: 1rem 0;
+    
+                    @include input-number();
+                  
+    
+                }
+    
+    
+                .check-group {
+                    width: 200px;
+                    height: auto;
+                    @include flex-box($justify: space-between);
+    
+                    .form-check{
+    
+                        span{
+    
+                            .form-check-input {
+                                width: 2em;
+                                height: 2em;
+                                margin-top: 0em;
+                                background-color: rgb(255, 255, 255,0);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                                border: none;
+                                
+                            }
+                         
+                        
+                            .form-check-input:checked[type=radio] {
+    
+                             background-image: none; 
+                            border-radius: 1rem;
+                            }
+    
+    
+    
+                            .form-check-input:checked {
+                         /*        background-color: none;
+                                border-color: none; */
+                                border-radius: 0;
+                                
+                            }
+    
+                            .form-check-input[type=radio] {
+                                border-radius: 0;
+                            }
+    
+                            .form-check-input:focus {
+                                 border-color: none;
+                                outline: none;
+                                box-shadow: none;
+                            }
+    
+                        }
+                    }
+                }
+                
+                %check-box {
+                    margin: 5px;
+                    background-color: $checkbox-color;
+                    transition: background-color 200ms ease, box-shadow 100ms ease;
+                    border-radius: 0.5em;
+                    @include flex-box;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                
+                .default-check-box {
+                    @extend %check-box;
+                    &:hover {
+                        @include glow($default-hover);	
+                    }
+    
+                    span{
+    
+                        .form-check-input:checked[type=radio] {
+                            box-shadow: 0 0 0em 0.6em $default-hover;
+                            }
+                    }
+                    
+                }
+                
+                .good-check-box {
+                    @extend %check-box;	
+                    &:hover {
+                        @include glow($good-hover);	
+                    }
+    
+                    span{
+    
+                        .form-check-input:checked[type=radio] {
+                            box-shadow: 0 0 0em 0.6em $good-hover;
+                            }
+                    }
+    
+                }
+                
+                .bad-check-box {
+                    @extend %check-box;	
+                    &:hover {
+                        @include glow($bad-hover);
+                    }
+    
+                    span{
+    
+                        .form-check-input:checked[type=radio] {
+                            box-shadow: 0 0 0em 0.6em $bad-hover;
+                            }
+                    }
+    
+                }
+                
+                .check-mark, .x-mark {
+                    color: $mark;
+                }
+                
+                .default-checked {
+                    background-color: $default-checked;
+                    border-radius: 1rem;
+                }
+                
+                .good-checked {
+                    background-color: $good-checked;
+                    border-radius: 1rem;
+                }
+                
+                .bad-checked {
+                    background-color: $bad-checked;
+                    border-radius: 1rem;
+                }
+    
+                .price{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10%;
+                    b{
+                        font-size: 35px;
+                    }
+                }
+                p{
+                    margin-top: 1rem;
+                }
+    
+                .btn-group{
+                  
+                    width: 100%;
+                    .btn,.btncart{
+                        flex: initial;
+                        width: 123px;
+                        margin-right: 10px;
+                        /* margin-bottom: 1rem; */
+                        background-color: rgb(253, 247, 143);
+                        color: white;
+                        border-radius: 10px;
+                        padding: 5px;
+                        button{
+                            margin: 1rem;
+                            background-color:  rgb(253, 247, 143);
+                            color: white;
+                            border: none;
+                        }
+                    }
+                }
+                .text-e{
+                    border-top: solid 1px rgb(151, 151, 151);
+                    border-bottom: solid 1px rgb(151, 151, 151);
+                    padding: 1rem;
+                    border-radius: 1rem;
+                    text-align: left;
+                }
+    
+            }
+        
+        }
+
+    }
+
+    .product-document{
+        .document{
+
+            margin: 1rem 0;
+            border: solid 1px rgb(97, 94, 94);
+            border-radius: 1rem;
+            
+            .text{
+                padding: 1rem;
+                line-height: 1.5rem;
+                font-size: 0.9rem;
+                .doc-header{
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+
+            }
+            
+        }
+    }
+
+    
+    .product-concern-content{
+        padding: 2rem 0;
+        .product-concern-main{
+            border: solid 1px rgb(142, 142, 142);
+            border-radius: 1rem;
+            @include flexb-c();
+            justify-content: flex-start;
+
+            .product-concern-item{
+                @include flexb-c();
+                
+
+  
+                a{
+                    padding: 1rem 1rem;
+                    margin: 1rem 0;
+                    @include a();
+                    font-size: 0.7rem;
+                    transition: all 1s;
+
+                    img{
+                        @include img();
+    
+                    }
+    
+                    .product-concern-title{
+
+                        p{
+                            font-size: 1rem;
+                            margin: 1rem 0;
+                            font-weight: 600;
+                            transition: all 0.5s;
+                        }
+
+                        p:hover{
+                            color: antiquewhite;
+                        }
+
+    
+                    }
+
+    
+                    .product-concern-text{
+                        
+                        p{
+                            margin: 0;
+                        }
+    
+                    }
+                }
+
+                a:hover{
+
+                    padding: 0rem 1rem 2rem;
+                    border-bottom: solid 1px rgb(182, 175, 175);
+
+                }
+
+
+            }
+        }
+    }
+

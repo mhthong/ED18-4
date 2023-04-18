@@ -1,0 +1,399 @@
+.table{
+    .table-1{
+        display: flex;
+        width: 100%;
+    }
+
+    .table-home-2{
+        width: 50%;
+    }
+
+    .table-home-1{
+        width: 100%;
+    }
+
+    .table-home {
+
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        table-layout: fixed;
+        display: flex;
+        flex-direction: column;
+        thead{
+            width: 100%;
+            background-color: #C81F24;
+
+             th {
+                background-color: #C81F24;
+                color: #fff;
+                font-weight: 600;
+            }
+        }
+        tbody{
+            border: 1px solid #ccc;
+            padding: 0;
+            width: 100%;
+            tr:nth-child(even) {
+                background-color:#E2EFDA;
+              }
+            tr{
+
+            }
+
+
+        }
+      }
+
+    .table-home caption {
+        font-size: 1.5em;
+        margin: .5em 0 .75em;
+      }
+
+      .table-home tr {
+        display: flex;
+        padding: .35em;
+
+
+      }
+
+       .table-home th,
+       .table-home td {
+/*         padding: .625em;
+        text-align: center; */
+
+      }
+
+       .table-home th {
+        font-size: .85em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+
+      @media screen and (max-width: 800px) {
+        .table-1{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .td-style::before{
+                width: 100%;
+                text-align: center;
+            }
+            .td-style{
+                text-align: left;
+            }
+        }
+        .table-home-2{
+            width: 100%;
+        }
+
+         .table-home {
+          border: 0;
+          td:first-child {
+            background-color: #c8e7ea;
+            border-bottom: 1px solid #91ced4;
+            border-radius: 0;
+            position: relative;
+            top: 0;
+            transform: translateY(0);
+            width: 100%;
+        }
+        .table-home td:last-child {
+            font-size: 0.95em;
+            line-height: 1.4;
+            text-align: right !important;
+        }
+        }
+
+
+
+         .table-home caption {
+          font-size: 1.3em;
+        }
+
+         .table-home thead {
+          border: none;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+
+         .table-home tr {
+          border-bottom: 3px solid #ddd;
+          display: contents;
+          margin-bottom: .625em;
+          width: 100%;
+        }
+
+         .table-home  td {
+            border-bottom: 1px solid #ddd;
+            display: block;
+            font-size: 0.8em;
+            text-align: right;
+            width: 100%;
+            margin: 0;
+        }
+
+         .table-home td::before {
+          /*
+          * aria-label has no advantage, it won't be read inside a  .table-home
+          content: attr(aria-label);
+          */
+          content: attr(data-label);
+          float: left;
+          font-weight: bold;
+          padding-left: 15px;
+          text-transform: uppercase;
+        }
+
+         .table-home td:last-child {
+          border-bottom: 0;
+
+        }
+        .table-home
+        {
+            td:first-child {
+                background-color: #C81F24 !important;
+                border-bottom: 1px solid #91ced4;
+                border-radius: 0;
+                color: #fff;
+                position: relative;
+                top: 0;
+                transform: translateY(0);
+                width: 100%;
+            }
+            td:not(:first-child):before {
+                color: #000000;
+
+            }
+        }
+
+
+      }
+
+}
+
+
+
+
+.panel{
+    .table-admin{
+        .table-1{
+            display: flex;
+            width: 100%;
+        }
+
+        .table-home-2{
+            width: 50%;
+        }
+
+        .table-home-1{
+            width: 100%;
+
+               thead{
+                width: 100%;
+                background-color: #c5c3c3;
+
+                 th {
+                    background-color: #c5c3c3;
+                    color: #dee7e7;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .table-home {
+
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+            table-layout: fixed;
+            display: flex;
+            flex-direction: column;
+            thead{
+                width: 100%;
+                background-color: #c5c3c3;
+
+                 th {
+                    background-color: #c5c3c3;
+                    color: #fff;
+                    font-weight: 600;
+                }
+            }
+            tbody{
+                border: 1px solid #ccc;
+                padding: 0;
+                width: 100%;
+                tr:nth-child(even) {
+                    background-color:#e0e5e7;;
+                  }
+                tr{
+
+                }
+
+
+            }
+          }
+
+        .table-home caption {
+            font-size: 1.5em;
+            margin: .5em 0 .75em;
+          }
+
+          .table-home tr {
+
+            padding: .35em;
+          }
+
+           .table-home th,
+           .table-home td {
+            padding: 2px;
+      /*       text-align: center; */
+          }
+
+           .table-home th {
+            font-size: .85em;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+          }
+
+
+            @media only screen and (min-width: 800px) {
+                .table-home tr {
+                    display: flex;
+                    padding: .35em;
+
+                  }
+
+                  tbody{
+                    border: 1px solid #ccc;
+                    padding: 0;
+                    width: 100%;
+                    tr:nth-child(even) {
+                        background-color:#e0e5e7;;
+                      }
+                    tr{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+
+                }
+            }
+
+          @media screen and (max-width: 800px) {
+            .table-1{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .td-style::before{
+                    width: 100%;
+                    text-align: center;
+                }
+                .td-style{
+                    text-align: left;
+                }
+            }
+            .table-home-2{
+                width: 100%;
+            }
+
+             .table-home {
+              border: 0;
+              td:first-child {
+                background-color: #c8e7ea;
+                border-bottom: 1px solid #91ced4;
+                border-radius: 0;
+                position: relative;
+                top: 0;
+                transform: translateY(0);
+                width: 100%;
+            }
+            .table-home td:last-child {
+                font-size: 0.95em;
+                line-height: 1.4;
+                text-align: right !important;
+            }
+            }
+
+
+
+             .table-home caption {
+              font-size: 1.3em;
+            }
+
+             .table-home thead {
+              border: none;
+              clip: rect(0 0 0 0);
+              height: 1px;
+              margin: -1px;
+              overflow: hidden;
+              padding: 0;
+              position: absolute;
+              width: 1px;
+            }
+
+             .table-home tr {
+              border-bottom: 3px solid #ddd;
+              display: contents;
+              margin-bottom: .625em;
+              width: 100%;
+            }
+
+             .table-home  td {
+                border-bottom: 1px solid #ddd;
+                display: block;
+                font-size: 0.8em;
+                text-align: right;
+                width: 100%;
+                margin: 0;
+                padding: 2px;
+                padding-right: 10px;
+
+            }
+
+             .table-home td::before {
+              /*
+              * aria-label has no advantage, it won't be read inside a  .table-home
+              content: attr(aria-label);
+              */
+              content: attr(data-label);
+              float: left;
+              font-weight: bold;
+              padding-left: 15px;
+              text-transform: uppercase;
+            }
+
+             .table-home td:last-child {
+              border-bottom: 0;
+
+            }
+            .table-home
+            {
+                td:first-child {
+                    background-color: #498ff9 !important;
+                    border-bottom: 1px solid #91ced4;
+                    border-radius: 0;
+                    color: #fff;
+                    position: relative;
+                    top: 0;
+                    transform: translateY(0);
+                    width: 100%;
+                }
+                td:not(:first-child):before {
+                    color: #000000;
+
+                }
+            }
+
+
+          }
+
+    }
+
+}
